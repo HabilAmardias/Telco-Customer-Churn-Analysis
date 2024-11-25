@@ -134,7 +134,8 @@ with col1:
     logistic_coef.update_layout(
         xaxis_title="Importances*",
         yaxis_title="Columns",
-        height=800
+        height=800,
+        showlegend=False
     )
     st.plotly_chart(logistic_coef,use_container_width=True)
 with col2:
@@ -160,7 +161,8 @@ with col1:
     service_monthly_barplot.update_layout(
         xaxis_title="Kendall Tau Correlation Coefficient",
         yaxis_title="Columns",
-        height=800
+        height=800,
+        showlegend=False
     )
     st.plotly_chart(service_monthly_barplot,use_container_width=True)
 
@@ -212,7 +214,8 @@ xgb_importances_bar=px.bar(
     color='Columns'
 )
 xgb_importances_bar.update_layout(
-    height=800
+    height=800,
+    showlegend=False
 )
 st.plotly_chart(xgb_importances_bar,use_container_width=True)
 
